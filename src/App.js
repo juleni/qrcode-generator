@@ -1,22 +1,41 @@
 import { useRef, useState } from "react";
+import ComboBox from "react-responsive-combo-box";
+import "react-responsive-combo-box/dist/index.css";
 import "./App.css";
 
 function App() {
+  const SELECT_OPTIONS = [
+    "50 x 50",
+    "100 x 100",
+    "150 x 150",
+    "200 x 200",
+    "250 x 250",
+    "300 x 300",
+  ];
+
+  const DEFAULT_BUTTON_TEXT = "Generate QR Code";
+
+  const [selectedOption, setSelectedOption] = useState("150 x 150");
+  const [highlightedOption, setHighlightedOption] = useState("150 x 150");
+  const [buttonText, setButtonText] = useState(DEFAULT_BUTTON_TEXT);
+  const [message, setMessage] = useState("");
   const [showQRCode, setShowQRCode] = useState(false);
   const inputRef = useRef(null);
   const imgRef = useRef(null);
+  const buttonRef = useRef(null);
 
-  const displayQRCode = () => {
-    console.log(imgRef.current.src);
-
+  const generateQRCode = () => {
     if (inputRef.current.value.length > 0) {
       setShowQRCode(true);
       // use QR Code API from https://goqr.me/api/
       imgRef.current.src =
-        " https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=" +
+        " https://api.qrserver.com/v1/create-qr-code/?size=" +
+        selectedOption.replace(/\s/g, "") +
+        "&data=" +
         inputRef.current.value;
     } else {
       setShowQRCode(false);
+      setMessage("URL or text should not be empty");
     }
   };
   return (
@@ -32,18 +51,42 @@ function App() {
           className="qr-input"
           placeholder="Enter URL or text"
         ></input>
-        <button className="generate-btn" onClick={() => displayQRCode()}>
-          Generate QR Code
-        </button>
+        <div className="container-cb">
+          <ComboBox
+            className="combo-box"
+            placeholder="150 x 150"
+            options={SELECT_OPTIONS}
+            enableAutocomplete
+            focusColor="#20C374"
+            renderOptions={(option) => (
+              <div className="combo-box-option">{option}</div>
+            )}
+            onSelect={(option) => {
+              setSelectedOption(option);
+            }}
+            defaultIndex={2}
+            onChange={(event) => console.log(event.target.value)}
+            onOptionsChange={(option) => {
+              setHighlightedOption(option);
+            }}
+          />
+          <button
+            className="generate-btn"
+            ref={buttonRef}
+            onClick={() => generateQRCode()}
+          >
+            {buttonText}
+          </button>
+        </div>
       </div>
       <div className={showQRCode ? "qr-code" : "qr-code-hidden"}>
-        <img
-          ref={imgRef}
-          src="images/qrcode.png"
-          alt="Generated QR Code"
-          className="qr-image"
-        />
+        <img ref={imgRef} alt="Generated QR Code" className="qr-image" />
       </div>
+      {!showQRCode && (
+        <div className="message">
+          <p>{message}</p>
+        </div>
+      )}
     </div>
   );
 }
