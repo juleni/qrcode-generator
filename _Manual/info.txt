@@ -1,0 +1,6 @@
+How to Create a QR Code Generator Using Html, Css and Javascript
+--------------------------------------------------------------
+https://www.youtube.com/watch?v=9_sjkRuP5kw  (9:17) 
+
+- npx create-react-app qrcode-generator
+
