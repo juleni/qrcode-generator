@@ -73,7 +73,12 @@ function App() {
           <button
             className="generate-btn"
             ref={buttonRef}
-            onClick={() => generateQRCode()}
+            onClick={() => {
+              //setButtonText("Generating ...");
+              generateQRCode();
+              //setButtonText(DEFAULT_BUTTON_TEXT);
+            }}
+            i
           >
             {buttonText}
           </button>
