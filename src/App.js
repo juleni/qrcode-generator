@@ -68,6 +68,7 @@ function App() {
           <ComboBox
             className="combo-box"
             placeholder="150 x 150"
+            defaultValue="150 x 150"
             options={SELECT_OPTIONS}
             enableAutocomplete
             selectedOptionColor="var(--combo-opt-sel-color)"
