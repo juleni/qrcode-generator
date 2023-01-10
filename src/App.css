@@ -66,7 +66,7 @@ input {
 }
 
 .qr-code {
-  margin-top: 10px;
+  margin-top: 7px;
   padding: 25px 0;
   border: 1px solid #ccc;
   background-color: var(--input-color);
@@ -82,7 +82,7 @@ input {
 }
 
 .container-cb {
-  margin-top: 5px;
+  margin-top: 7px;
   display: flex;
   justify-content: space-between;
 }
