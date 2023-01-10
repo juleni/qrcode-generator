@@ -1,7 +1,7 @@
 import React from "react";
 import "./DarkMode.css";
 
-export default function DarkMode() {
+export default function DarkMode({ setSelectedTheme }) {
   let clickedClass = "clicked";
   const body = document.body;
   const lightTheme = "light";
@@ -10,6 +10,7 @@ export default function DarkMode() {
 
   if (localStorage) {
     theme = localStorage.getItem("theme");
+    setSelectedTheme(theme);
   }
 
   if (theme === lightTheme || theme === darkTheme) {
@@ -30,6 +31,7 @@ export default function DarkMode() {
       localStorage.setItem("theme", darkTheme);
       theme = darkTheme;
     }
+    setSelectedTheme(theme);
   };
 
   return (
@@ -37,7 +39,6 @@ export default function DarkMode() {
       className={theme === "dark" ? clickedClass : ""}
       id="darkMode"
       onClick={(e) => switchTheme(e)}
-      
     ></button>
   );
 }
