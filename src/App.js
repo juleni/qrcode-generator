@@ -23,6 +23,7 @@ function App() {
   const [buttonText, setButtonText] = useState(DEFAULT_BUTTON_TEXT);
   const [message, setMessage] = useState("");
   const [showQRCode, setShowQRCode] = useState(false);
+  const [selectedTheme, setSelectedTheme] = useState("");
   const inputRef = useRef(null);
   const imgRef = useRef(null);
   const buttonRef = useRef(null);
@@ -32,7 +33,6 @@ function App() {
     comboBox.alt = "Select QR Code size";
     comboBox[0].id = "comboBoxButton";
     comboBox[0].style = "cursor: pointer;";
-    inputRef.current.focus();
 
     // set up tooltips
     tippy("#comboBoxButton", {
@@ -51,6 +51,11 @@ function App() {
       placement: "top",
     });
   }, []);
+
+  useEffect(() => {
+    inputRef.current.focus();
+    console.log("SELECTED: " + selectedTheme);
+  }, [selectedTheme]);
 
   const generateQRCode = () => {
     if (inputRef.current.value.length > 0) {
@@ -79,7 +84,7 @@ function App() {
           </p>
         </div>
         <div className="dark-mode">
-          <DarkMode />
+          <DarkMode setSelectedTheme={setSelectedTheme} />
         </div>
       </div>
 
