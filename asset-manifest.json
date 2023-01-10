@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/qrcode-generator/static/css/main.50d56c22.css",
-    "main.js": "/qrcode-generator/static/js/main.e606c512.js",
+    "main.css": "/qrcode-generator/static/css/main.ca840188.css",
+    "main.js": "/qrcode-generator/static/js/main.c45bc561.js",
     "static/media/night.jpg": "/qrcode-generator/static/media/night.1e76205c78bb2bcb4a23.jpg",
     "static/media/day.jpg": "/qrcode-generator/static/media/day.c909d34123d674b9ab63.jpg",
     "static/media/moon.png": "/qrcode-generator/static/media/moon.08c8560ae615e449e9e2.png",
     "index.html": "/qrcode-generator/index.html",
-    "main.50d56c22.css.map": "/qrcode-generator/static/css/main.50d56c22.css.map",
-    "main.e606c512.js.map": "/qrcode-generator/static/js/main.e606c512.js.map"
+    "main.ca840188.css.map": "/qrcode-generator/static/css/main.ca840188.css.map",
+    "main.c45bc561.js.map": "/qrcode-generator/static/js/main.c45bc561.js.map"
   },
   "entrypoints": [
-    "static/css/main.50d56c22.css",
-    "static/js/main.e606c512.js"
+    "static/css/main.ca840188.css",
+    "static/js/main.c45bc561.js"
   ]
 }
