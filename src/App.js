@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import ComboBox from "react-responsive-combo-box";
 import "react-responsive-combo-box/dist/index.css";
 import "./App.css";
@@ -24,6 +24,12 @@ function App() {
   const inputRef = useRef(null);
   const imgRef = useRef(null);
   const buttonRef = useRef(null);
+
+  useEffect(() => {
+    const comboBox = document.getElementsByClassName("_3LDgJ");
+    //comboBox.alt = "Select QR Code image size";
+    comboBox[0].style = "cursor: pointer;";
+  }, []);
 
   const generateQRCode = () => {
     if (inputRef.current.value.length > 0) {
@@ -64,14 +70,14 @@ function App() {
             placeholder="150 x 150"
             options={SELECT_OPTIONS}
             enableAutocomplete
-            focusColor="#20C374"
+            selectedOptionColor="var(--combo-opt-sel-color)"
+            highlightColor="var(--combo-opt-hlt-color)"
             renderOptions={(option) => (
               <div className="combo-box-option">{option}</div>
             )}
             onSelect={(option) => {
               setSelectedOption(option);
             }}
-            defaultIndex={2}
             onChange={(event) => console.log(event.target.value)}
             onOptionsChange={(option) => {
               setHighlightedOption(option);

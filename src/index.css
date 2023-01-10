@@ -3,7 +3,7 @@
   --black: black;
   --bckg-light1: #215aa9;
   --bckg-light2: #64acef;
-  --panel-light: rgb(192, 226, 231);
+  --panel-light: rgb(158, 224, 249);
   --bckg-dark1: #06152a;
   --bckg-dark2: #173959;
   --panel-dark: rgb(110, 162, 170);
@@ -13,6 +13,10 @@
   --button-size-dark: rgb(64, 121, 196);
   --button-gen-light: rgb(77, 142, 228);
   --button-gen-dark: rgb(57, 112, 185);
+  --combo-opt-sel-light: rgb(66, 131, 217);
+  --combo-opt-sel-dark: rgb(43, 95, 163);
+  --combo-opt-hlt-light: rgb(145, 188, 243);
+  --combo-opt-hlt-dark: rgb(85, 149, 233);
   --input-light: white;
   --input-dark: lightgray;
   --anim-square-light: white;
@@ -50,6 +54,8 @@ body.light {
   --button-size-color: var(--button-size-light);
   --button-gen-color: var(--button-gen-light);
   --input-color: var(--input-light);
+  --combo-opt-sel-color: var(--combo-opt-sel-light);
+  --combo-opt-hlt-color: var(--combo-opt-hlt-light);
   --message-color: var(--message-light);
   --font-weight: 400;
   --image: url("./day.jpg");
@@ -65,6 +71,8 @@ body.dark {
   --button-size-color: var(--button-size-dark);
   --button-gen-color: var(--button-gen-dark);
   --input-color: var(--input-dark);
+  --combo-opt-sel-color: var(--combo-opt-sel-dark);
+  --combo-opt-hlt-color: var(--combo-opt-hlt-dark);
   --message-color: var(--message-dark);
   --font-weight: 500;
   --image: url("./night.jpg");

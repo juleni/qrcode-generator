@@ -62,6 +62,7 @@ input {
 
 .qr-input {
   background-color: var(--input-color);
+  border: 1px solid #ccc;
 }
 
 .qr-code {
@@ -94,8 +95,11 @@ input {
   cursor: pointer !important;
   background-color: var(--button-size-color);
 }
+
 ._3LDgJ {
-  color: var(--text-color);
+  color: var(--text-color) !important;
+  caret-color: transparent;
+  border-color: transparent;
 }
 
 ._WbEAz {
