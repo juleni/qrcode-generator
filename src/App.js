@@ -28,6 +28,11 @@ function App() {
   const buttonRef = useRef(null);
 
   useEffect(() => {
+    const comboBox = document.getElementsByClassName("_3LDgJ");
+    comboBox.alt = "Select QR Code size";
+    comboBox[0].id = "comboBoxButton";
+    comboBox[0].style = "cursor: pointer;";
+
     // set up tooltips
     tippy("#comboBoxButton", {
       content: "Select QR Code size",
@@ -44,10 +49,6 @@ function App() {
       theme: "light",
       placement: "top",
     });
-    const comboBox = document.getElementsByClassName("_3LDgJ");
-    comboBox.alt = "Select QR Code size";
-    comboBox[0].id = "comboBoxButton";
-    comboBox[0].style = "cursor: pointer;";
   }, []);
 
   const generateQRCode = () => {
@@ -61,6 +62,7 @@ function App() {
         inputRef.current.value;
     } else {
       setShowQRCode(false);
+      inputRef.current.focus();
       setMessage("⚠ 𝚄𝚁𝙻 𝚘𝚛 𝚝𝚎𝚡𝚝 𝚜𝚑𝚘𝚞𝚕𝚍 𝚗𝚘𝚝 𝚋𝚎 𝚎𝚖𝚙𝚝𝚢");
     }
   };
@@ -89,7 +91,6 @@ function App() {
         ></input>
         <div className="container-cb">
           <ComboBox
-            id="comboBoxButton"
             className="combo-box"
             placeholder="150 x 150"
             defaultValue="150 x 150"
