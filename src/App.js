@@ -1,6 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import ComboBox from "react-responsive-combo-box";
 import "react-responsive-combo-box/dist/index.css";
+import tippy from "tippy.js";
+import "tippy.js/dist/tippy.css"; // optional for styling
 import "./App.css";
 import DarkMode from "./components/DarkMode";
 
@@ -14,7 +16,7 @@ function App() {
     "300 x 300",
   ];
 
-  const DEFAULT_BUTTON_TEXT = "Generate QR Code";
+  const DEFAULT_BUTTON_TEXT = "🅶🅴🅽🅴🆁🅰🆃🅴";
 
   const [selectedOption, setSelectedOption] = useState("150 x 150");
   const [highlightedOption, setHighlightedOption] = useState("150 x 150");
@@ -26,8 +28,25 @@ function App() {
   const buttonRef = useRef(null);
 
   useEffect(() => {
+    // set up tooltips
+    tippy("#comboBoxButton", {
+      content: "Select QR Code size",
+      theme: "light",
+      placement: "top",
+    });
+    tippy("#generateButton", {
+      content: "Click to generate QR code",
+      theme: "light",
+      placement: "top",
+    });
+    tippy("#darkMode", {
+      content: "Switch dark/light mode",
+      theme: "light",
+      placement: "top",
+    });
     const comboBox = document.getElementsByClassName("_3LDgJ");
-    //comboBox.alt = "Select QR Code image size";
+    comboBox.alt = "Select QR Code size";
+    comboBox[0].id = "comboBoxButton";
     comboBox[0].style = "cursor: pointer;";
   }, []);
 
@@ -42,15 +61,19 @@ function App() {
         inputRef.current.value;
     } else {
       setShowQRCode(false);
-      setMessage("URL or text should not be empty");
+      setMessage("⚠ 𝚄𝚁𝙻 𝚘𝚛 𝚝𝚎𝚡𝚝 𝚜𝚑𝚘𝚞𝚕𝚍 𝚗𝚘𝚝 𝚋𝚎 𝚎𝚖𝚙𝚝𝚢");
     }
   };
+
   return (
     <div className="container">
       <div className="header">
         <div className="header-title">
           <h1>Q͡R͡ C͡O͡D͡E͡ g͡e͡n͡e͡r͡a͡t͡o͡r͡</h1>
-          <p>Type a URL or text to generate QR Code</p>
+          <p>
+            🇹‌🇾‌🇵‌🇪‌ 🇦‌ 🇺‌🇷‌🇱‌ 🇴‌🇷‌ 🇹‌🇪‌🇽‌🇹‌ 🇹‌🇴‌
+            🇬‌🇪‌🇳‌🇪‌🇷‌🇦‌🇹‌🇪‌ 🇶‌🇷‌ 🇨‌🇴‌🇩‌🇪‌
+          </p>
         </div>
         <div className="dark-mode">
           <DarkMode />
@@ -66,6 +89,7 @@ function App() {
         ></input>
         <div className="container-cb">
           <ComboBox
+            id="comboBoxButton"
             className="combo-box"
             placeholder="150 x 150"
             defaultValue="150 x 150"
@@ -85,6 +109,7 @@ function App() {
             }}
           />
           <button
+            id="generateButton"
             className="generate-btn"
             ref={buttonRef}
             onClick={() => {
@@ -92,7 +117,6 @@ function App() {
               generateQRCode();
               //setButtonText(DEFAULT_BUTTON_TEXT);
             }}
-            i
           >
             {buttonText}
           </button>

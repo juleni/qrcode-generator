@@ -1,5 +1,6 @@
 {
   "name": "qrcode-generator",
+  "homepage": "https://juleni.github.io/qrcode-generator/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -11,8 +12,8 @@
     "react-dom": "^18.2.0",
     "react-responsive-combo-box": "^1.3.0",
     "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4",
-    "homepage": "https://juleni.github.io/qrcode-generator/"
+    "tippy.js": "^6.3.7",
+    "web-vitals": "^2.1.4"
   },
   "scripts": {
     "predeploy": "npm run build",

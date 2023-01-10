@@ -1,6 +1,7 @@
 :root {
   --white: white;
   --black: black;
+  --text-color-dark: rgb(249, 224, 134);
   --bckg-light1: #215aa9;
   --bckg-light2: #64acef;
   --panel-light: rgb(158, 224, 249);
@@ -8,7 +9,7 @@
   --bckg-dark2: #173959;
   --panel-dark: rgb(110, 162, 170);
   --message-light: red;
-  --message-dark: rgb(208, 5, 5);
+  --message-dark: rgb(200, 44, 44);
   --button-size-light: rgb(103, 165, 245);
   --button-size-dark: rgb(64, 121, 196);
   --button-gen-light: rgb(77, 142, 228);
@@ -74,6 +75,6 @@ body.dark {
   --combo-opt-sel-color: var(--combo-opt-sel-dark);
   --combo-opt-hlt-color: var(--combo-opt-hlt-dark);
   --message-color: var(--message-dark);
-  --font-weight: 500;
+  --font-weight: 400;
   --image: url("./night.jpg");
 }

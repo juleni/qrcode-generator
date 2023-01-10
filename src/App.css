@@ -5,6 +5,17 @@
   border-radius: 7px;
   padding: 20px;
   transition: 0.1s;
+  /* 
+  overflow: hidden;
+  position: relative;
+
+  position: relative;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: background-image 0.7s ease-in-out;
+  background-image: var(--image); */
 }
 
 .header {
@@ -17,24 +28,15 @@
   display: flex;
 }
 
-#image {
-  width: 100%;
-  height: auto;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-image: var(--image);
-}
-
 .header-title h1 {
   font-size: 28px;
-  font-weight: 500;
+  font-weight: var(--font-weight);
   margin-bottom: 5px;
 }
 
 .header-title p {
-  font-size: 16px;
+  font-size: 18px;
+  font-weight: var(--font-weight);
   margin-bottom: 10px;
 }
 
