@@ -49,7 +49,7 @@ function App() {
     <div className="container">
       <div className="header">
         <div className="header-title">
-          <h1>QR Code Generator</h1>
+          <h1>Q͡R͡ C͡O͡D͡E͡ g͡e͡n͡e͡r͡a͡t͡o͡r͡</h1>
           <p>Type a URL or text to generate QR Code</p>
         </div>
         <div className="dark-mode">

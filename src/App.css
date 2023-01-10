@@ -10,6 +10,7 @@
 .header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .dark-mode {
@@ -27,7 +28,7 @@
 }
 
 .header-title h1 {
-  font-size: 23px;
+  font-size: 28px;
   font-weight: 500;
   margin-bottom: 5px;
 }
