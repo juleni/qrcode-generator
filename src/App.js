@@ -32,6 +32,7 @@ function App() {
     comboBox.alt = "Select QR Code size";
     comboBox[0].id = "comboBoxButton";
     comboBox[0].style = "cursor: pointer;";
+    inputRef.current.focus();
 
     // set up tooltips
     tippy("#comboBoxButton", {
