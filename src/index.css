@@ -1,3 +1,26 @@
+:root {
+  --white: white;
+  --black: black;
+  --bckg-light1: #215aa9;
+  --bckg-light2: #64acef;
+  --panel-light: rgb(192, 226, 231);
+  --bckg-dark1: #06152a;
+  --bckg-dark2: #173959;
+  --panel-dark: rgb(110, 162, 170);
+  --message-light: red;
+  --message-dark: rgb(208, 5, 5);
+  --button-size-light: rgb(103, 165, 245);
+  --button-size-dark: rgb(64, 121, 196);
+  --button-gen-light: rgb(77, 142, 228);
+  --button-gen-dark: rgb(57, 112, 185);
+  --input-light: white;
+  --input-dark: lightgray;
+  --anim-square-light: white;
+  --anim-square-dark: gray;
+  --anim-circle-light: white;
+  --anim-circle-dark: gray;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -6,11 +29,43 @@
 }
 
 body {
-  background-image: linear-gradient(#09336d, #1b87eb);
+  /* background-image: linear-gradient(#09336d, #1b87eb);*/
+  background-image: linear-gradient(var(--bckg-color1), var(--bckg-color2));
+  color: var(--text-color);
+  font-weight: var(--font-weight);
   width: 100%;
   height: 100vh;
-  background-color: #ff676d;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+body.light {
+  --bckg-color1: var(--bckg-light1);
+  --bckg-color2: var(--bckg-light2);
+  --bckg-panel: var(--panel-light);
+  --bckg-square-color: var(--anim-square-light);
+  --bckg-circle-color: var(--anim-circle-light);
+  --text-color: var(--black);
+  --button-size-color: var(--button-size-light);
+  --button-gen-color: var(--button-gen-light);
+  --input-color: var(--input-light);
+  --message-color: var(--message-light);
+  --font-weight: 400;
+  --image: url("./day.jpg");
+}
+
+body.dark {
+  --bckg-color1: var(--bckg-dark1);
+  --bckg-color2: var(--bckg-dark2);
+  --bckg-panel: var(--panel-dark);
+  --bckg-square-color: var(--anim-square-dark);
+  --bckg-circle-color: var(--anim-circle-dark);
+  --text-color: var(--white);
+  --button-size-color: var(--button-size-dark);
+  --button-gen-color: var(--button-gen-dark);
+  --input-color: var(--input-dark);
+  --message-color: var(--message-dark);
+  --font-weight: 500;
+  --image: url("./night.jpg");
 }

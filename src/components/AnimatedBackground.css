@@ -1,6 +1,6 @@
 .square > ul li {
   position: absolute;
-  border: 1px solid #fff;
+  border: 1px solid var(--bckg-square-color);
   width: 30px;
   height: 30px;
   list-style: none;
@@ -10,7 +10,7 @@
   position: absolute;
   top: 25vh;
   left: 45vw;
-  background-color: #fff;
+  background-color: var(--bckg-square-color);
   opacity: 0;
   animation: square-anim 10s linear infinite;
 }
@@ -56,16 +56,16 @@
 
 .circle > ul li {
   position: absolute;
-  border: 1px solid #fff;
-  width: 40px;
-  height: 40px;
+  border: 1px solid var(--bckg-circle-color);
+  width: 30px;
+  height: 30px;
   list-style: none;
 }
 
 .circle li {
   bottom: 10;
   left: 15vw;
-  animation: circle-anim 7s linear infinite;
+  animation: circle-anim 10s linear infinite;
 }
 
 .circle li:nth-child(2) {

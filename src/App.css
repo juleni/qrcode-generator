@@ -1,18 +1,38 @@
 .container {
-  background-color: rgb(192, 226, 231);
+  background-color: var(--bckg-panel);
+  color: var(--text-color);
   width: 400px;
   border-radius: 7px;
   padding: 20px;
   transition: 0.1s;
 }
 
-.header h1 {
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.dark-mode {
+  display: flex;
+}
+
+#image {
+  width: 100%;
+  height: auto;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: var(--image);
+}
+
+.header-title h1 {
   font-size: 23px;
   font-weight: 500;
   margin-bottom: 5px;
 }
 
-.header p {
+.header-title p {
   font-size: 16px;
   margin-bottom: 10px;
 }
@@ -28,8 +48,8 @@ button {
 button {
   width: 70%;
   border: none;
-  background-color: #1d68d8;
-  color: beige;
+  background-color: var(--button-gen-color);
+  color: var(--text-color);
   font-size: 18px;
   cursor: pointer;
 }
@@ -40,11 +60,15 @@ input {
   padding: 10px;
 }
 
+.qr-input {
+  background-color: var(--input-color);
+}
+
 .qr-code {
   margin-top: 10px;
   padding: 25px 0;
   border: 1px solid #ccc;
-  background-color: white;
+  background-color: var(--input-color);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -65,22 +89,24 @@ input {
 .combo-box {
   width: 28% !important;
   height: 50px !important;
-  background-color: white;
   border-radius: 5px;
   align-items: center;
   cursor: pointer !important;
-  background-color: lightskyblue;
+  background-color: var(--button-size-color);
+}
+._3LDgJ {
+  color: var(--text-color);
 }
 
 ._WbEAz {
   border-radius: 5px;
   cursor: pointer !important;
-  background-color: lightskyblue;
+  background-color: var(--button-size-color);
 }
 
 .message {
   margin-top: 10px;
-  color: red;
+  color: var(--message-color);
   display: flex;
   justify-content: center;
 }

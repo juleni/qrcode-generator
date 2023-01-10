@@ -2,6 +2,7 @@ import { useRef, useState } from "react";
 import ComboBox from "react-responsive-combo-box";
 import "react-responsive-combo-box/dist/index.css";
 import "./App.css";
+import DarkMode from "./components/DarkMode";
 
 function App() {
   const SELECT_OPTIONS = [
@@ -41,9 +42,15 @@ function App() {
   return (
     <div className="container">
       <div className="header">
-        <h1>QR Code Generator</h1>
-        <p>Type a URL or text to generate QR Code</p>
+        <div className="header-title">
+          <h1>QR Code Generator</h1>
+          <p>Type a URL or text to generate QR Code</p>
+        </div>
+        <div className="dark-mode">
+          <DarkMode />
+        </div>
       </div>
+
       <div className="input-form">
         <input
           ref={inputRef}
