@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/static/css/main.0798c187.css",
+    "main.js": "/static/js/main.c0b6c08e.js",
+    "static/media/night.jpg": "/static/media/night.1e76205c78bb2bcb4a23.jpg",
+    "static/media/day.jpg": "/static/media/day.c909d34123d674b9ab63.jpg",
+    "static/media/moon.png": "/static/media/moon.08c8560ae615e449e9e2.png",
+    "index.html": "/index.html",
+    "main.0798c187.css.map": "/static/css/main.0798c187.css.map",
+    "main.c0b6c08e.js.map": "/static/js/main.c0b6c08e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0798c187.css",
+    "static/js/main.c0b6c08e.js"
+  ]
+}
