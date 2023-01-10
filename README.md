@@ -3,6 +3,7 @@ React application generating QR Code from a text.
 Features:
 - select QR Code image size
 - switch to Dark/Light mode
+- animated background using CSS
 
 ## Demo page: 
 https://juleni.github.io/qrcode-generator/
