@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/qrcode-generator/static/css/main.ca840188.css",
-    "main.js": "/qrcode-generator/static/js/main.de7d20be.js",
+    "main.js": "/qrcode-generator/static/js/main.aba5f4ad.js",
     "static/media/night.jpg": "/qrcode-generator/static/media/night.1e76205c78bb2bcb4a23.jpg",
     "static/media/day.jpg": "/qrcode-generator/static/media/day.c909d34123d674b9ab63.jpg",
     "static/media/moon.png": "/qrcode-generator/static/media/moon.08c8560ae615e449e9e2.png",
     "index.html": "/qrcode-generator/index.html",
     "main.ca840188.css.map": "/qrcode-generator/static/css/main.ca840188.css.map",
-    "main.de7d20be.js.map": "/qrcode-generator/static/js/main.de7d20be.js.map"
+    "main.aba5f4ad.js.map": "/qrcode-generator/static/js/main.aba5f4ad.js.map"
   },
   "entrypoints": [
     "static/css/main.ca840188.css",
-    "static/js/main.de7d20be.js"
+    "static/js/main.aba5f4ad.js"
   ]
 }
