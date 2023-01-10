@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import ComboBox from "react-responsive-combo-box";
-import "react-responsive-combo-box/dist/index.css";
+import "react-responsive-combo-box/dist/index.css"; // optional for styling
 import tippy from "tippy.js";
 import "tippy.js/dist/tippy.css"; // optional for styling
 import "./App.css";
@@ -54,7 +54,6 @@ function App() {
 
   useEffect(() => {
     inputRef.current.focus();
-    console.log("SELECTED: " + selectedTheme);
   }, [selectedTheme]);
 
   const generateQRCode = () => {
