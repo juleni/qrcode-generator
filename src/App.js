@@ -16,7 +16,7 @@ function App() {
     "300 x 300",
   ];
 
-  const DEFAULT_BUTTON_TEXT = "🅶🅴🅽🅴🆁🅰🆃🅴";
+  const DEFAULT_BUTTON_TEXT = "ＧＥＮＥＲＡＴＥ";
 
   const [selectedOption, setSelectedOption] = useState("150 x 150");
   const [highlightedOption, setHighlightedOption] = useState("150 x 150");
@@ -76,10 +76,11 @@ function App() {
     <div className="container">
       <div className="header">
         <div className="header-title">
-          <h1>Q͡R͡ C͡O͡D͡E͡ g͡e͡n͡e͡r͡a͡t͡o͡r͡</h1>
+          {/* QR CODE generator */}
+          <h1>Q̲R̲ C̲O̲D̲E̲ g̲e̲n̲e̲r̲a̲t̲o̲r̲</h1>
           <p>
-            🇹‌🇾‌🇵‌🇪‌ 🇦‌ 🇺‌🇷‌🇱‌ 🇴‌🇷‌ 🇹‌🇪‌🇽‌🇹‌ 🇹‌🇴‌
-            🇬‌🇪‌🇳‌🇪‌🇷‌🇦‌🇹‌🇪‌ 🇶‌🇷‌ 🇨‌🇴‌🇩‌🇪‌
+            {/* Type a URL or text to generate QR code */}
+            Type a URL or text to generate QR code
           </p>
         </div>
         <div className="dark-mode">
